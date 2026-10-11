@@ -24,8 +24,8 @@ h1, h2, h3, .p-title { font-family: var(--sans); }
     linear-gradient(90deg, rgba(0,170,160,.22) 1px, transparent 1px);
   background-size: 100px 100px, 100px 100px, 10px 10px, 10px 10px;
   background-position: -1px -1px;
-  -webkit-mask-image: radial-gradient(ellipse farthest-corner at 50% 50%, rgba(0,0,0,.35) 0%, rgba(0,0,0,.65) 55%, #000 100%);
-  mask-image: radial-gradient(ellipse farthest-corner at 50% 50%, rgba(0,0,0,.35) 0%, rgba(0,0,0,.65) 55%, #000 100%); }
+  -webkit-mask-image: radial-gradient(ellipse farthest-corner at 50% 50%, rgba(0,0,0,.14) 0%, rgba(0,0,0,.22) 30%, rgba(0,0,0,.6) 65%, #000 100%);
+  mask-image: radial-gradient(ellipse farthest-corner at 50% 50%, rgba(0,0,0,.14) 0%, rgba(0,0,0,.22) 30%, rgba(0,0,0,.6) 65%, #000 100%); }
 
 /* nav: sticky dark terminal bar with frosted blur and command-line colours */
 .topbar { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid #263138;
