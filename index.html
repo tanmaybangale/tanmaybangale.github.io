@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<section class="intro">
+  <p class="lede">{{ site.tagline }}</p>
+  <p class="creds mono">{{ site.credentials | join: ' · ' }}</p>
+</section>
+
+<section id="writing">
+  <div class="section-head"><h2>Writing</h2></div>
+  {% if site.posts.size == 0 %}
+    <div class="empty">// no posts yet — add a markdown file to _posts/</div>
+  {% else %}
+  <ul class="posts">
+    {% for p in site.posts %}
+    <li><a href="{{ p.url | relative_url }}">
+      <div class="p-date">{{ p.date | date: '%b %d, %Y' }}</div>
+      <div>
+        <div class="p-title">{{ p.title }}{% if p.featured %}<span class="badge">featured</span>{% endif %}</div>
+        <div class="p-desc">{{ p.description }}</div>
+        <div class="p-meta">
+          <span>{{ p.content | number_of_words | divided_by: 220 | plus: 1 }} min read</span>
+          {% for t in p.tags %}<span class="tag">#{{ t }}</span>{% endfor %}
+        </div>
+      </div>
+    </a></li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</section>

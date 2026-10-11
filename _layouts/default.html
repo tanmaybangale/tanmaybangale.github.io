@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  {% feed_meta %}
+  <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="topbar">
+  <header class="nav container">
+    <a href="{{ '/' | relative_url }}" class="brand mono"><span class="accent">~/</span>{{ site.handle }}</a>
+    <nav>
+      <a href="{{ site.links.github }}" target="_blank" rel="noopener">github ↗</a>
+      <a href="{{ site.links.linkedin }}" target="_blank" rel="noopener">linkedin ↗</a>
+    </nav>
+  </header>
+  </div>
+  <main class="container">
+    {{ content }}
+  </main>
+  <footer class="container footer mono">
+    <span>© {{ 'now' | date: '%Y' }} {{ site.title }}</span>
+    <span>views are my own</span>
+  </footer>
+</body>
+</html>

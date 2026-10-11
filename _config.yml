@@ -1,0 +1,31 @@
+# ── Personalise everything here ─────────────────────────────
+title: Tanmay Bangale
+handle: tanmay_bangale
+description: >-
+  Applied AI engineer at Google writing about production LLM agents, MCP,
+  evals and cloud infrastructure — with code, experiments and benchmarks.
+tagline: >-
+  Flirting with LLMs. I build and break LLM systems — agents, inference, evals
+  and the infra underneath.
+credentials: [AI Engineer @ Google, ex-AWS, IIT Bombay ePG (CSE&AI)]
+email: bangletanmay@gmail.com
+
+links:
+  github: https://github.com/tanmaybangale
+  linkedin: https://www.linkedin.com/in/tanmaybangale/
+
+
+# ── Site settings (rarely touched) ──────────────────────────
+url: https://tanmaybangale.github.io
+permalink: /blog/:title/
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+defaults:
+  - scope: { type: posts }
+    values: { layout: post }
+exclude: [README.md, AGENTS.md, preview.html]
