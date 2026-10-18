@@ -2,7 +2,7 @@
 title: "Why Your LLM Can’t Read Spreadsheets (And How an In-Memory DuckDB Agent Fixes It)"
 description: "Stuffing a 50k-row sheet into a 1M-token prompt burns ~670k tokens and hallucinates sums. Sending a 90-token schema and running the generated SQL in DuckDB finishes in 8.7 ms with exact arithmetic."
 tags: [agents, duckdb, llm, sql]
-featured: true
+featured: false
 ---
 
 > **TL;DR:** A 1M-token context window is not a database. Stuffing raw CSV rows into a prompt causes attention dilution, structural drift on multi-table sheets, and stochastic arithmetic. Split the job: let the LLM translate intent + schema (<150 tokens) into SQL, and let an in-process DuckDB instance execute the math in milliseconds. Full ADK implementation: [`google_sheets_analyst_agent`](https://github.com/tanmaybangale/google_sheets_analyst_agent).
